@@ -8,11 +8,13 @@
       <!-- dasiy ui + tailwind css  -->
       <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <!-- fontawsome cdn  -->
+      <script src="https://kit.fontawesome.com/659dc3132f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
       <!-- header section start here  -->
-      <header id="content" class=" content max-w-6xl mx-auto py-5 border-b-2 border-gray-300 hidden">
+      <header class=" content max-w-6xl mx-auto py-5 border-b-2 border-gray-300 hidden">
             <nav class="flex items-center justify-between">
                   <div class="flex items-center gap-2">
                         <h1 class="text-2xl font-bold">English</h1>
@@ -20,9 +22,9 @@
                         <h1 class="text-2xl font-bold">জানালা</h1>
                   </div>
                   <div>
-                        <a href=""><button class="btn btn-outline btn-primary"><img
+                        <a href="FAG"><button class="btn btn-outline btn-primary"><img
                                           src="./assets/fa-circle-question.png" alt=""> FAQ</button></a>
-                        <a href=""><button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png"
+                        <a href="learn"><button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png"
                                           alt="">Learn</button></a>
                         <a href=""><button class="btn btn-outline btn-primary"><img
                                           src="./assets/fa-arrow-right-from-bracket.png" alt="">Logout</button></a>
@@ -32,7 +34,7 @@
       <!-- main section start here  -->
       <main class="max-w-6xl mx-auto py-5">
             <!-- banner section start here  -->
-            <div class="flex  items-center ">
+            <div class="flex  items-center " id="banner">
                   <div class="space-y-5 w-[500px] ">
                         <h1 class="text-4xl font-bold text-blue-500">English <span class="text-black">is Esay!!</span>
                         </h1>
@@ -42,7 +44,7 @@
                         <input class="w-80 p-3" id="input__name" type="text" placeholder="Enter Your Name"> <br>
                         <input type="password" name="password" class="w-80 p-3" id="password"
                               placeholder="Password(1234)"><br>
-                        <button id="getStarted"  class="btn btn-active btn-primary">Get Started</button>
+                        <button id="getStarted" class="btn btn-active btn-primary">Get Started</button>
 
                   </div>
                   <div>
@@ -51,21 +53,24 @@
 
             </div>
             <!-- lets learn vocabulary -->
-            <section id="content" class="hidden content" >
+            <section id="learn" class="hidden  content">
                   <h1 class="text-center text-4xl font-bold"><span class="text-blue-500">Let's</span> Learn Vocabularies
                   </h1>
                   <div id="category-container" class="flex gap-3 justify-center mt-5">
-
                   </div>
+                  <div id="card-container" class="grid grid-cols-3 gap-5 text-center">
+                        
+                  </div>
+
 
             </section>
 
-            <section class="text-center text-3xl font-bold mt-20 content hidden">
+            <section id="lessnStart" class=" flex flex-col justify-center items-center text-3xl font-bold mt-20 content hidden cols-span-full ">
                   <h1>আপনি এখনো কোন Lesson Select করেন ন</h1>
                   <h2>একটি Lesson Select করুন।</h2>
             </section>
 
-            <section class="mt-20 hidden">
+            <section id="FAG" class="mt-20 hidden">
                   <h1 class="text-center text-3xl font-bold"><span class="text-blue-400 ">Frequently</span> Asked
                         Questions</h1>
                   <div class="collapse collapse-plus bg-base-100 border border-base-300">
@@ -105,7 +110,7 @@
 
             </section>
 
-            <section id="content"  class="mt-20 hidden content">
+            <section id="nav" class="mt-20 hidden content">
                   <div class="flex items-center justify-between">
                         <div class="flex flex-col gap-4">
                               <div class="flex items-center ">
@@ -129,7 +134,7 @@
                         </div>
                   </div>
             </section>
-
+          
       </main>
       <script src="./script/index.js"></script>
       <script src="./script/login.js"></script>
