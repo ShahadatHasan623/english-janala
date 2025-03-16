@@ -12,7 +12,7 @@
 
 <body>
       <!-- header section start here  -->
-      <header class="max-w-6xl mx-auto py-5 border-b-2 border-gray-300">
+      <header id="content" class=" content max-w-6xl mx-auto py-5 border-b-2 border-gray-300 hidden">
             <nav class="flex items-center justify-between">
                   <div class="flex items-center gap-2">
                         <h1 class="text-2xl font-bold">English</h1>
@@ -40,9 +40,9 @@
                               আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons
                               আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
                         <input class="w-80 p-3" id="input__name" type="text" placeholder="Enter Your Name"> <br>
-                        <input type="password" name="password" class="w-80 p-3" id="input__password"
+                        <input type="password" name="password" class="w-80 p-3" id="password"
                               placeholder="Password(1234)"><br>
-                        <button id="getStarted"class="btn btn-active btn-primary">Get Started</button>
+                        <button id="getStarted"  class="btn btn-active btn-primary">Get Started</button>
 
                   </div>
                   <div>
@@ -51,58 +51,61 @@
 
             </div>
             <!-- lets learn vocabulary -->
-            <section class="">
-                  <h1 class="text-center text-4xl font-bold"><span class="text-blue-500">Let's</span> Learn Vocabularies</h1>
-                  <div class="text-center mt-5">
-                        <button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -1</button>
-                        <button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -2     </button>
-                        <button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -3    </button>
-                        <button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -4 </button>
-                        <button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -5 </button>
-                        <button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -6 </button>
-                        <button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -7</button>
-                        
+            <section id="content" class="hidden content" >
+                  <h1 class="text-center text-4xl font-bold"><span class="text-blue-500">Let's</span> Learn Vocabularies
+                  </h1>
+                  <div id="category-container" class="flex gap-3 justify-center mt-5">
+
                   </div>
+
             </section>
 
-            <section class="text-center text-3xl font-bold mt-20">
+            <section class="text-center text-3xl font-bold mt-20 content hidden">
                   <h1>আপনি এখনো কোন Lesson Select করেন ন</h1>
                   <h2>একটি Lesson Select করুন।</h2>
             </section>
 
-            <section class="mt-20">
-                  <h1 class="text-center text-3xl font-bold"><span class="text-blue-400">Frequently</span> Asked Questions</h1>
+            <section class="mt-20 hidden">
+                  <h1 class="text-center text-3xl font-bold"><span class="text-blue-400 ">Frequently</span> Asked
+                        Questions</h1>
                   <div class="collapse collapse-plus bg-base-100 border border-base-300">
                         <input type="radio" name="my-accordion-3" checked="checked" />
-                        <div class="collapse-title font-semibold">1.How can I start learning English on this website?</div>
-                        <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the
+                        <div class="collapse-title font-semibold">1.How can I start learning English on this website?
+                        </div>
+                        <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and
+                              follow the
                               registration process.</div>
                   </div>
                   <div class="collapse collapse-plus bg-base-100 border border-base-300">
                         <input type="radio" name="my-accordion-3" />
                         <div class="collapse-title font-semibold">2.Is this website free to use ?</div>
-                        <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions
+                        <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow
+                              the instructions
                               sent to your email.</div>
                   </div>
                   <div class="collapse collapse-plus bg-base-100 border border-base-300">
                         <input type="radio" name="my-accordion-3" />
                         <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
-                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to
+                              make changes.</div>
                   </div>
                   <div class="collapse collapse-plus bg-base-100 border border-base-300">
                         <input type="radio" name="my-accordion-3" />
                         <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
-                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to
+                              make changes.</div>
                   </div>
                   <div class="collapse collapse-plus bg-base-100 border border-base-300">
                         <input type="radio" name="my-accordion-3" />
-                        <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
-                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                        <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?
+                        </div>
+                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to
+                              make changes.</div>
                   </div>
-                  
+
             </section>
 
-            <section class="mt-20">
+            <section id="content"  class="mt-20 hidden content">
                   <div class="flex items-center justify-between">
                         <div class="flex flex-col gap-4">
                               <div class="flex items-center ">
@@ -110,25 +113,26 @@
                                     <img src="./assets/logo.png" alt="">
                                     <h1 class="text-2xl font-bold">জানালা</h1>
                               </div>
-                             <div>
-                              <h2 class="text-xl font-bold">ইংরেজি শিখুন সহজে</h2>
-                              <p class="text-xl">Providing ED-Tech Applications since 2025</p>
-                             </div>
+                              <div>
+                                    <h2 class="text-xl font-bold">ইংরেজি শিখুন সহজে</h2>
+                                    <p class="text-xl">Providing ED-Tech Applications since 2025</p>
+                              </div>
 
                         </div>
                         <div>
                               <h1 class="text-xl font-bold">Follow Us</h1>
-                             <div class="flex gap-2 items-center">
-                              <a href=""><img src="./assets/fb-thumb.png" alt=""></a>
-                              <a href=""><img src="./assets/github-thumb.png" alt=""></a>
-                              <a href=""><img src="./assets/instagram-thumb.png" alt=""></a>
-                             </div>
+                              <div class="flex gap-2 items-center">
+                                    <a href=""><img src="./assets/fb-thumb.png" alt=""></a>
+                                    <a href=""><img src="./assets/github-thumb.png" alt=""></a>
+                                    <a href=""><img src="./assets/instagram-thumb.png" alt=""></a>
+                              </div>
                         </div>
                   </div>
             </section>
 
       </main>
       <script src="./script/index.js"></script>
+      <script src="./script/login.js"></script>
 </body>
 
 </html>
