@@ -8,6 +8,7 @@ document.getElementById("getStarted")
             hiddenClass.forEach(hiddenClass=>{
                   hiddenClass.classList.remove("hidden")
                   bannerSection.style.display ="none"
+                  
             })
       }
       else{

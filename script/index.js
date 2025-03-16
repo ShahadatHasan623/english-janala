@@ -8,10 +8,10 @@ function displayCategories(data) {
       // console.log(data)
       const cetagoryContainer = document.getElementById("category-container")
       for (let cat of data) {
-            console.log(cat)
+            // console.log(cat)
             const categoryDiv = document.createElement("div")
             categoryDiv.innerHTML = `
-             <button  onclick="loadData(${cat.level_no})" class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">lesson-${cat.level_no}</button>
+             <button id="btn-${cat.id}" onclick="loadData(${cat.level_no})" class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">lesson-${cat.level_no}</button>
             `
             cetagoryContainer.appendChild(categoryDiv)
       }
@@ -21,8 +21,9 @@ function displayCategories(data) {
 
 function loadData (id){
       fetch(`https://openapi.programming-hero.com/api/level/${id}`)
-      .then(response =>response.json())                                                                                      
-      .then(data => cardDisplay(data.data))
+      .then(response =>response.json())                                                                 .then(data => {
+            cardDisplay(data.data)
+      })
 }
 const cardDisplay =(cards)=>{
       const cardAdd = document.getElementById("card-container")
@@ -31,14 +32,14 @@ const cardDisplay =(cards)=>{
       cards.forEach(card => {
             console.log(card)
             const div =document.createElement("div")
-            div.innerHTML =`<div class="card w-96 h-50 bg-base-200 card-xl shadow-xl">
+            div.innerHTML =`<div class="card w-90 bg-base-200 card-xl shadow-xl">
       <div class="card-body ">
       <h1 class="card-title flex justify-center"> ${card.word}</h1>
       <p>meaning/pronunciation</p>
       <h2>${card.meaning} / ${card.pronunciation}</h2>
       <div class="flex justify-between items-center">
        <div>
-           <i class="fa-solid fa-circle"></i>
+          <button id="click_button" onclick="addButton()"><i class="fa-solid fa-circle"></i></button>
       </div>
       <div>
       <p><i class="fa-solid fa-volume-high"></i></p>
@@ -59,5 +60,55 @@ const cardDisplay =(cards)=>{
       }
 
 }
+function addButton(){
+      fetch("https://openapi.programming-hero.com/api/word/5")
+      .then(response=>response.json())
+      .then(dataad => modal(dataad.data))
+}
+const modal =(modals)=>{
+      console.log(modals)
+            document.getElementById("card_details").showModal();
+            document.getElementById("card-box").innerHTML = `
+            <h1 class="text-3xl font-bold">${modals.word} (<i class="fa-solid fa-microphone-lines"></i>:${modals.pronunciation})</h1>
+            <h2 class="text-3xl font-bold">Example</h2>
+
+            <p>${modals.sentence}</p>
+
+            <h1 class="text-3xl font-bold">সমার্থক শব্দ গুলো</h1>
+
+            <p>${modals.synonyms[0]} ${modals.synonyms[1]} ${modals.synonyms[2]} </p>
+          
+            `
+     
+      
+     
+}
+
 
 showCatogry()
+
+
+// id
+// :
+// 5
+// level
+// :
+// 1
+// meaning
+// :
+// "আগ্রহী"
+// partsOfSpeech
+// :
+// "adjective"
+// points
+// :
+// 1
+// pronunciation
+// :
+// "ইগার"
+// sentence
+// :
+// "The kids were eager to open their gifts."
+// synonyms
+// :
+// (3)['enthusiastic', 'excited', 'keen']
