@@ -39,7 +39,7 @@ const cardDisplay =(cards)=>{
       <h2>${card.meaning} / ${card.pronunciation}</h2>
       <div class="flex justify-between items-center">
        <div>
-          <button id="click_button" onclick="addButton()"><i class="fa-solid fa-circle"></i></button>
+          <button id="click_button" onclick="loadCategory(${card.id})"><i class="fa-solid fa-circle"></i></button>
       </div>
       <div>
       <p><i class="fa-solid fa-volume-high"></i></p>
@@ -60,27 +60,27 @@ const cardDisplay =(cards)=>{
       }
 
 }
-function addButton(){
-      fetch("https://openapi.programming-hero.com/api/word/5")
-      .then(response=>response.json())
-      .then(dataad => modal(dataad.data))
-}
-const modal =(modals)=>{
-      console.log(modals)
+
+
+const loadCategory =(id)=>{
+      const url =`https://openapi.programming-hero.com/api/word/${id}`
+      // console.log(url)
+      fetch(url)
+      .then(res=>res.json())
+      .then(data =>{
             document.getElementById("card_details").showModal();
             document.getElementById("card-box").innerHTML = `
-            <h1 class="text-3xl font-bold">${modals.word} (<i class="fa-solid fa-microphone-lines"></i>:${modals.pronunciation})</h1>
-            <h2 class="text-3xl font-bold">Example</h2>
-
-            <p>${modals.sentence}</p>
-
-            <h1 class="text-3xl font-bold">সমার্থক শব্দ গুলো</h1>
-
-            <p>${modals.synonyms[0]} ${modals.synonyms[1]} ${modals.synonyms[2]} </p>
-          
+            <div class="space-y-3">
+            <h1 class="text-3xl font-bold">${data.data.word} (<i class="fa-solid fa-microphone-lines"></i>: ${data.data.meaning})<h1>
+            <h1 class="text-3xl font-bold">Example</h1>
+            <p class="text-xl"> ${data.data.sentence}</p>
+            <h2 class="text-3xl font-semibold"> সমার্থক শব্দ গুলো </h2>
+            <p class="text-xl"> ${data.data.synonyms[0]} ${data.data.synonyms[1]} ${data.data.synonyms[2]} </p>
+            </div>
+            
             `
+      })
      
-      
      
 }
 
