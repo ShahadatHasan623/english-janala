@@ -71,11 +71,12 @@ const loadCategory =(id)=>{
             document.getElementById("card_details").showModal();
             document.getElementById("card-box").innerHTML = `
             <div class="space-y-3">
-            <h1 class="text-3xl font-bold">${data.data.word} (<i class="fa-solid fa-microphone-lines"></i>: ${data.data.meaning})<h1>
+            <h1 class="text-3xl font-bold">${data.data.word} (<i class="fa-solid fa-microphone-lines"></i>: ${data.data.meaning} )<h1>
             <h1 class="text-3xl font-bold">Example</h1>
             <p class="text-xl"> ${data.data.sentence}</p>
             <h2 class="text-3xl font-semibold"> সমার্থক শব্দ গুলো </h2>
             <p class="text-xl"> ${data.data.synonyms[0]} ${data.data.synonyms[1]} ${data.data.synonyms[2]} </p>
+            <button class="btn btn-primary">Compelet learning</button>
             </div>
             
             `

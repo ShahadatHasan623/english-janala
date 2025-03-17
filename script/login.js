@@ -15,3 +15,6 @@ document.getElementById("getStarted")
             alert("Are Not successfully password")
       }
 })
+document.getElementById("logout-btn").addEventListener('click',function(){
+      window.location.reload()
+})
