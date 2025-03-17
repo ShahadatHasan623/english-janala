@@ -23,12 +23,9 @@
                         <h1 class="text-2xl font-bold">জানালা</h1>
                   </div>
                   <div>
-                        <a href="FAG"><button class="btn btn-outline btn-primary"><img
-                                          src="./assets/fa-circle-question.png" alt=""> FAQ</button></a>
-                        <a href="learn"><button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png"
-                                          alt="">Learn</button></a>
-                        <a href=""><button class="btn btn-outline btn-primary"><img
-                                          src="./assets/fa-arrow-right-from-bracket.png" alt="">Logout</button></a>
+                        <button id="faq-btn" class="btn btn-outline btn-primary"><img src="./assets/fa-circle-question.png" alt=""> FAQ</button>
+                      <button id="learn-btn" class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png"alt="">Learn</button>
+                      <button class="btn btn-outline btn-primary"><img src="./assets/fa-arrow-right-from-bracket.png" alt="">Logout</button></a>
                   </div>
             </nav>
       </header>
@@ -54,7 +51,7 @@
 
             </div>
             <!-- lets learn vocabulary -->
-            <section id="learn" class="hidden  content mt-20">
+            <section id="learn-section" class="hidden  content mt-20">
                   <h1 class="text-center text-4xl font-bold"><span class="text-blue-500">Let's</span> Learn Vocabularies
                   </h1>
                   <div id="category-container" class="flex gap-3 justify-center mt-5">
@@ -72,7 +69,7 @@
                   <h2>একটি Lesson Select করুন।</h2>
             </section>
 
-            <section id="FAG" class="mt-20 content hidden">
+            <section id="faq-section" class="mt-20 content hidden">
                   <h1 class="text-center text-3xl font-bold"><span class="text-blue-400 ">Frequently</span> Asked
                         Questions</h1>
                   <div class="collapse collapse-plus bg-base-100 border border-base-300">
@@ -161,6 +158,7 @@
       <script src="./script/index.js"></script>
       <script src="./script/login.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="./script/scrollbar.js"></script>
 
 </body>
 
