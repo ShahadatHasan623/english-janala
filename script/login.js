@@ -8,7 +8,13 @@ document.getElementById("getStarted")
             hiddenClass.forEach(hiddenClass=>{
                   hiddenClass.classList.remove("hidden")
                   bannerSection.style.display ="none"
-                  
+                  Swal.fire({
+                        title: 'অভিনন্দন!',
+                        text: 'তুমি সফলভাবে কাজটি সম্পন্ন করেছো।',
+                        icon: 'success',
+                        confirmButtonText: 'ধন্যবাদ!'
+                  });
+
             })
       }
       else{
