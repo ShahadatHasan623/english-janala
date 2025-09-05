@@ -2,164 +2,143 @@
 <html lang="en">
 
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>English sikho </title>
-      <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-      <!-- dasiy ui + tailwind css  -->
-      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      <!-- fontawsome cdn  -->
-      <script src="https://kit.fontawesome.com/659dc3132f.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English sikho</title>
+  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <!-- Daisy UI + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/659dc3132f.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-      <!-- header section start here  -->
-      <header class=" content max-w-6xl mx-auto py-5 border-b-2 border-gray-300 hidden fixed top-0 w-full left-0 right-0 bg-white z-100">
-            <nav class="flex items-center justify-between ">
-                  <div class="flex items-center gap-2">
-                        <h1 class="text-2xl font-bold">English</h1>
-                        <img src="./assets/logo.png" alt="">
-                        <h1 class="text-2xl font-bold">জানালা</h1>
-                  </div>
-                  <div>
-                        <button id="faq-btn" class="btn btn-outline btn-primary"><img src="./assets/fa-circle-question.png" alt=""> FAQ</button>
-                      <button id="learn-btn" class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png"alt="">Learn</button>
-                      <button id="logout-btn" class="btn btn-outline btn-primary"><img src="./assets/fa-arrow-right-from-bracket.png" alt="">Logout</button></a>
-                  </div>
-            </nav>
-      </header>
-      <!-- main section start here  -->
-      <main class="max-w-6xl mx-auto py-5">
-            <!-- banner section start here  -->
-            <div class="flex  items-center " id="banner">
-                  <div class="space-y-5 w-[500px] ">
-                        <h1 class="text-4xl font-bold text-blue-500">English <span class="text-black">is Esay!!</span>
-                        </h1>
-                        <p class="text-2xl font-bold">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
-                              আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons
-                              আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-                        <input class="w-80 p-3" id="input__name" type="text" placeholder="Enter Your Name"> <br>
-                        <input type="password" name="password" class="w-80 p-3" id="password"
-                              placeholder="Password(1234)"><br>
-                        <button id="getStarted" class="btn btn-active btn-primary">Get Started</button>
+<body class="bg-white">
+  <!-- Header -->
+  <header
+    class="content max-w-6xl mx-auto py-4 border-b-2 border-gray-300 hidden fixed top-0 w-full left-0 right-0 bg-white z-50">
+    <nav class="flex items-center justify-between px-4">
+      <div class="flex items-center gap-2">
+        <h1 class="text-xl sm:text-2xl font-bold">English</h1>
+        <img src="./assets/logo.png" alt="" class="w-6 h-6 sm:w-8 sm:h-8">
+        <h1 class="text-xl sm:text-2xl font-bold">জানালা</h1>
+      </div>
+      <div class="flex gap-2 flex-wrap">
+        <button id="faq-btn" class="btn btn-sm sm:btn-md btn-outline btn-primary flex items-center gap-1">
+          <img src="./assets/fa-circle-question.png" class="w-4 h-4" alt=""> FAQ
+        </button>
+        <button id="learn-btn" class="btn btn-sm sm:btn-md btn-outline btn-primary flex items-center gap-1">
+          <img src="./assets/fa-book-open.png" class="w-4 h-4" alt=""> Learn
+        </button>
+        <button id="logout-btn" class="btn btn-sm sm:btn-md btn-outline btn-primary flex items-center gap-1">
+          <img src="./assets/fa-arrow-right-from-bracket.png" class="w-4 h-4" alt=""> Logout
+        </button>
+      </div>
+    </nav>
+  </header>
 
-                  </div>
-                  <div>
-                        <img src="./assets/hero-student.png" alt="">
-                  </div>
+  <!-- Main -->
+  <main class="max-w-6xl mx-auto px-4 py-5">
+    <!-- Banner -->
+    <div class="flex flex-col md:flex-row items-center gap-8 mt-16 md:mt-24" id="banner">
+      <div class="space-y-5 md:w-1/2">
+        <h1 class="text-3xl sm:text-4xl font-bold text-blue-500">English
+          <span class="text-black">is Easy!!</span>
+        </h1>
+        <p class="text-lg sm:text-xl font-semibold leading-relaxed">
+          আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ।
+        </p>
+        <input class="w-full sm:w-80 p-3 border rounded-md" id="input__name" type="text" placeholder="Enter Your Name">
+        <input type="password" name="password" class="w-full sm:w-80 p-3 border rounded-md" id="password"
+          placeholder="Password (1234)">
+        <button id="getStarted" class="btn btn-primary w-full sm:w-auto">Get Started</button>
+      </div>
+      <div class="md:w-1/2">
+        <img src="./assets/hero-student.png" alt="Student" class="w-full max-w-sm mx-auto">
+      </div>
+    </div>
 
-            </div>
-            <!-- lets learn vocabulary -->
-            <section id="learn-section" class="hidden  content mt-20">
-                  <h1 class="text-center text-4xl font-bold"><span class="text-blue-500">Let's</span> Learn Vocabularies
-                  </h1>
-                  <div id="category-container" class="flex gap-3 justify-center mt-5">
-                  </div>
-                  <div id="card-container" class="grid grid-cols-3 gap-4 text-center mt-5 p-5 rounded-xl">
+    <!-- Learn Section -->
+    <section id="learn-section" class="hidden content mt-16">
+      <h1 class="text-center text-2xl sm:text-4xl font-bold">
+        <span class="text-blue-500">Let's</span> Learn Vocabularies
+      </h1>
+      <div id="category-container" class="flex flex-wrap gap-3 justify-center mt-5"></div>
+      <div id="card-container"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center mt-5 p-5 rounded-xl">
+      </div>
+    </section>
 
-                  </div>
+    <!-- Lesson Start -->
+    <section id="lessnStart"
+      class="flex flex-col justify-center items-center text-xl sm:text-2xl md:text-3xl font-bold mt-16 content hidden">
+      <h1>আপনি এখনো কোন Lesson Select করেন নি</h1>
+      <h2>একটি Lesson Select করুন।</h2>
+    </section>
 
+    <!-- FAQ -->
+    <section id="faq-section" class="mt-16 content hidden">
+      <h1 class="text-center text-2xl sm:text-3xl font-bold">
+        <span class="text-blue-400">Frequently</span> Asked Questions
+      </h1>
+      <div class="space-y-2 mt-4">
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="faq" checked />
+          <div class="collapse-title font-semibold">1. How can I start learning English?</div>
+          <div class="collapse-content text-sm">Start by chatting with me...</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="faq" />
+          <div class="collapse-title font-semibold">2. Is this website free?</div>
+          <div class="collapse-content text-sm">Yes, free resources available...</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="faq" />
+          <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
+          <div class="collapse-content text-sm">Go to "My Account" to update profile.</div>
+        </div>
+      </div>
+    </section>
 
-            </section>
+    <!-- Footer -->
+    <section id="nav" class="mt-16 hidden content">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
+          <div class="flex items-center gap-2">
+            <h1 class="text-xl sm:text-2xl font-bold">English</h1>
+            <img src="./assets/logo.png" alt="" class="w-6 h-6 sm:w-8 sm:h-8">
+            <h1 class="text-xl sm:text-2xl font-bold">জানালা</h1>
+          </div>
+          <div>
+            <h2 class="text-lg sm:text-xl font-bold">ইংরেজি শিখুন সহজে</h2>
+            <p class="text-base sm:text-lg">Providing ED-Tech Applications since 2025</p>
+          </div>
+        </div>
+        <div class="text-center md:text-right">
+          <h1 class="text-lg sm:text-xl font-bold">Follow Us</h1>
+          <div class="flex gap-3 justify-center md:justify-end mt-2">
+            <a href="#"><img src="./assets/fb-thumb.png" class="w-6 h-6" alt=""></a>
+            <a href="#"><img src="./assets/github-thumb.png" class="w-6 h-6" alt=""></a>
+            <a href="#"><img src="./assets/instagram-thumb.png" class="w-6 h-6" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <section id="lessnStart"
-                  class=" flex flex-col justify-center items-center text-3xl font-bold mt-20 content hidden cols-span-full ">
-                  <h1>আপনি এখনো কোন Lesson Select করেন ন</h1>
-                  <h2>একটি Lesson Select করুন।</h2>
-            </section>
+    <!-- Modal -->
+    <dialog id="card_details" class="modal">
+      <div id="card-box" class="modal-box"></div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+  </main>
 
-            <section id="faq-section" class="mt-20 content hidden">
-                  <h1 class="text-center text-3xl font-bold"><span class="text-blue-400 ">Frequently</span> Asked
-                        Questions</h1>
-                  <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                        <input type="radio" name="my-accordion-3" checked="checked" />
-                        <div class="collapse-title font-semibold">1.How can I start learning English on this website?
-                        </div>
-                        <div class="collapse-content text-sm">Start by chatting with me in English—I’ll help you with
-                              grammar, vocabulary, and sentence structure.
-                              Ask for learning resources, such as books, websites, or practice exercises.
-                              Practice daily by writing short sentences, and I can correct and improve them for you!
-                        </div>
-
-                  </div>
-                  <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                        <input type="radio" name="my-accordion-3" />
-                        <div class="collapse-title font-semibold">2.Is this website free to use ?</div>
-                        <div class="collapse-content text-sm">Yes, the BBC Janala website offers free English learning
-                              resources. Users can access text and audio content without
-                              charge.
-                        </div>
-                  </div>
-                  <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                        <input type="radio" name="my-accordion-3" />
-                        <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
-                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to
-                              make changes.</div>
-                  </div>
-                  <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                        <input type="radio" name="my-accordion-3" />
-                        <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
-                        <div class="collapse-content text-sm">You can build your English vocabulary by reading books,
-                              articles, and newspapers daily. Practice using new words in
-                              sentences and conversations to reinforce learning. Additionally, use vocabulary apps and
-                              flashcards to memorize and
-                              review words effectively.</div>
-                  </div>
-                  <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                        <input type="radio" name="my-accordion-3" />
-                        <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?
-                        </div>
-                        <div class="collapse-content text-sm">It depends on the platform or institution offering the
-                              course. Some websites provide free courses but charge for
-                              certificates. Others offer both free courses and certificates upon completion. Check the
-                              course details to confirm
-                              certification availability.</div>
-                  </div>
-
-            </section>
-
-            <section id="nav" class="mt-20 hidden content">
-                  <div class="flex items-center justify-between">
-                        <div class="flex flex-col gap-4">
-                              <div class="flex items-center ">
-                                    <h1 class="text-2xl font-bold">English</h1>
-                                    <img src="./assets/logo.png" alt="">
-                                    <h1 class="text-2xl font-bold">জানালা</h1>
-                              </div>
-                              <div>
-                                    <h2 class="text-xl font-bold">ইংরেজি শিখুন সহজে</h2>
-                                    <p class="text-xl">Providing ED-Tech Applications since 2025</p>
-                              </div>
-
-                        </div>
-                        <div>
-                              <h1 class="text-xl font-bold">Follow Us</h1>
-                              <div class="flex gap-2 items-center">
-                                    <a href=""><img src="./assets/fb-thumb.png" alt=""></a>
-                                    <a href=""><img src="./assets/github-thumb.png" alt=""></a>
-                                    <a href=""><img src="./assets/instagram-thumb.png" alt=""></a>
-                              </div>
-                        </div>
-                  </div>
-            </section>
-            <!-- Open the modal using ID.showModal() method -->
-            <!-- <button class="btn" onclick="my_modal_2.showModal()">open modal</button> -->
-            <dialog id="card_details" class="modal">
-                  <div id="card-box" class="modal-box">
-                        
-                  </div>
-                  <form method="dialog" class="modal-backdrop">
-                        <button>close</button>
-                  </form>
-            </dialog>
-
-      </main>
-      <script src="./script/index.js"></script>
-      <script src="./script/login.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script src="./script/scrollbar.js"></script>
-
+  <!-- Scripts -->
+  <script src="./script/index.js"></script>
+  <script src="./script/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./script/scrollbar.js"></script>
 </body>
 
 </html>
